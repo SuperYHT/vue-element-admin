@@ -264,3 +264,17 @@ Modern browsers and Internet Explorer 10+.
 [MIT](https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE)
 
 Copyright (c) 2017-present PanJiaChen
+
+
+
+
+
+1.克隆以后 删除package.json中tui-editor:1.3.3
+
+2.\src\components\MarkdownEditor\index.vue文件，将全部import换成下面几个 import 'codemirror/lib/codemirror.css' import '@toast-ui/editor/dist/toastui-editor.css' import Editor from '@toast-ui/vue-editor' import defaultOptions from './default-options' 并将该文件下的getValue和setValue分别换成getMarkdown和setMarkdown
+
+3.单独安装tui-editor npm install --save @toast-ui/vue-editor
+
+4.安装其他依赖 npm i
+
+5.跑起来 npm run dev
